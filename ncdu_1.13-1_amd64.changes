@@ -1,0 +1,33 @@
+Format: 1.8
+Date: Thu, 29 Mar 2018 14:24:51 +0200
+Source: ncdu
+Binary: ncdu
+Built-For-Profiles: nobiarch nocheck
+Architecture: amd64
+Version: 1.13-1
+Distribution: unstable
+Urgency: low
+Maintainer: Eugene V. Lyubimkin <jackyf@debian.org>
+Changed-By: Eugene V. Lyubimkin <jackyf@debian.org>
+Description:
+ ncdu       - ncurses disk usage viewer
+Changes:
+ ncdu (1.13-1) unstable; urgency=low
+ .
+   * New upstream release.
+   * debian/copyright:
+     - Updated upstream and packaging years.
+   * debian/control:
+     - Bumped Standards-Version to 4.1.1, no changes needed.
+Checksums-Sha1:
+ 5d45851ffb3a54d048d5a5434ba8d178c8676824 52848 ncdu-dbgsym_1.13-1_amd64.deb
+ 60195accc8e3d9a5d9b03d860469661acd7308ed 5379 ncdu_1.13-1_amd64.buildinfo
+ 0ee7d387dc8482e195d1be81d94048929a09071b 79012 ncdu_1.13-1_amd64.deb
+Checksums-Sha256:
+ d6470cb9d703661aee8b1d831623fa0d9e01dac189b2bf0ba9717b199841b0b8 52848 ncdu-dbgsym_1.13-1_amd64.deb
+ 3a8b915b9147f00f48d3f74c019885f9caefc4e607bc47fd95976f19ae8c665c 5379 ncdu_1.13-1_amd64.buildinfo
+ ba15890b4e0fac5cabf5c676dc7e6b4cd7531cca8b8ba681451c403522646c8d 79012 ncdu_1.13-1_amd64.deb
+Files:
+ 20469d0d19fac59c1e2e9265e622465c 52848 debug optional ncdu-dbgsym_1.13-1_amd64.deb
+ a1f15491ef1c73117fa4a11a68909e97 5379 admin optional ncdu_1.13-1_amd64.buildinfo
+ 7c76ac6d9d9ea9b42764069abe9a96aa 79012 admin optional ncdu_1.13-1_amd64.deb

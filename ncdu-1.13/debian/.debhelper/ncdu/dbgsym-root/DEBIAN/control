@@ -1,0 +1,12 @@
+Package: ncdu-dbgsym
+Source: ncdu
+Version: 1.13-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Eugene V. Lyubimkin <jackyf@debian.org>
+Installed-Size: 76
+Depends: ncdu (= 1.13-1)
+Section: debug
+Priority: optional
+Description: debug symbols for ncdu
+Build-Ids: 825b6243a5c22ba232b6b158d0c1861dd102354e

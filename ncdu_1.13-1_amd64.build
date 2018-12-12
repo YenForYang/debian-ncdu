@@ -1,0 +1,175 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck
+dpkg-buildpackage: info: source package ncdu
+dpkg-buildpackage: info: source version 1.13-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Eugene V. Lyubimkin <jackyf@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_clean
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_auto_configure
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for gcc... icc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether icc accepts -g... yes
+checking for icc option to accept ISO C89... none needed
+checking whether icc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of icc... none
+checking for ranlib... ranlib
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking how to run the C preprocessor... icc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking for unistd.h... (cached) yes
+checking fnmatch.h usability... yes
+checking fnmatch.h presence... yes
+checking for fnmatch.h... yes
+checking ncurses.h usability... yes
+checking ncurses.h presence... yes
+checking for ncurses.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for int64_t... yes
+checking for uint64_t... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for struct stat.st_blocks... yes
+checking for getcwd... yes
+checking for gettimeofday... yes
+checking for fnmatch... yes
+checking for chdir... yes
+checking for rmdir... yes
+checking for unlink... yes
+checking for lstat... yes
+checking for system... yes
+checking for getenv... yes
+checking for ncursesw... yes
+configure: Using /bin/sh as the default shell if $SHELL is not set
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+   dh_auto_build
+	make V=1 -j1
+make[1]: Entering directory '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13'
+make  all-am
+make[2]: Entering directory '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13'
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/browser.o src/browser.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/delete.o src/delete.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/dirlist.o src/dirlist.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/dir_common.o src/dir_common.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/dir_export.o src/dir_export.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/dir_import.o src/dir_import.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/dir_mem.o src/dir_mem.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/dir_scan.o src/dir_scan.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/exclude.o src/exclude.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/help.o src/help.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/shell.o src/shell.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/quit.o src/quit.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/main.o src/main.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/path.o src/path.c
+icc -DHAVE_CONFIG_H -I.  -I./deps -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c -o src/util.o src/util.c
+icc  -g -O2 -fdebug-prefix-map=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -Wl,-z,relro -Wl,--as-needed,--gc-sections,--print-gc-sections,--print-memory-usage,--stats -o ncdu src/browser.o src/delete.o src/dirlist.o src/dir_common.o src/dir_export.o src/dir_import.o src/dir_mem.o src/dir_scan.o src/exclude.o src/help.o src/shell.o src/quit.o src/main.o src/path.o src/util.o  -lncursesw -ltinfo
+ld: removing unused section '.rodata.cst4' in file '/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o'
+ld: removing unused section '.data' in file '/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o'
+Memory region         Used Size  Region Size  %age Used
+ld: total time in link: 0.175513
+make[2]: Leaving directory '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13'
+make[1]: Leaving directory '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary
+   dh_auto_test
+   dh_testroot
+   dh_prep
+   dh_auto_install
+	make V=1 -j1 install DESTDIR=/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13/debian/ncdu AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13'
+make[2]: Entering directory '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13'
+ /bin/mkdir -p '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13/debian/ncdu/usr/bin'
+  /usr/bin/install -c ncdu '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13/debian/ncdu/usr/bin'
+ /bin/mkdir -p '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13/debian/ncdu/usr/share/man/man1'
+ /usr/bin/install -c -m 644 ncdu.1 '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13/debian/ncdu/usr/share/man/man1'
+make[2]: Leaving directory '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13'
+make[1]: Leaving directory '/home/richard/debs/NONGIT/ncdu/check/ncdu-1.13'
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+   dh_fixperms
+   dh_missing
+   dh_strip
+   dh_makeshlibs
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+   dh_shlibdeps
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/ncdu/usr/bin/ncdu was not linked against libdl.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/ncdu/usr/bin/ncdu was not linked against libgcc_s.so.1 (it uses none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+   dh_builddeb
+dpkg-deb: building package 'ncdu' in '../ncdu_1.13-1_amd64.deb'.
+dpkg-deb: building package 'ncdu-dbgsym' in '../ncdu-dbgsym_1.13-1_amd64.deb'.
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../ncdu_1.13-1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian ncdu_1.13-1_amd64.changes ...
+W: ncdu: hardening-no-pie usr/bin/ncdu
+Finished running lintian.
